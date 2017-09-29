@@ -1,30 +1,10 @@
-
+/*
+*   HTML代码输出页面转换模块，用于展示实例代码用
+*   created by nocoolyoyo on 2017-09-29
+*
+* */
 let escapeHtml = (codes)=>{
-   console.log(codes);
-    let rules = [
-        //type,replace,表示替换， class表示添加包裹标签价class
-        {
-            //<,>字符转义
-            test: /\</,
-            type: 'replace',
-            content: '&lt;',
-        },
-        {
-            //<,>字符转义
-            test: /\>/,
-            type: 'replace',
-            content: '&gt;',
-        },
-        {
-            //普通标签转换规则
-            test: /&lt;|&gt;/,
-            type: 'class',
-            content:'escode-tag',
-        },
-    ];
     codes = codes
-
-
             //处理一般标签
             .replace(/(<.*?>)/g,'&mlt;span &class;="escape-tag"&mgt;$1&mlt;/span&mgt;')
             //处理doctype
@@ -44,9 +24,11 @@ let escapeHtml = (codes)=>{
             //替换自定义的class标识
             .replace(/&class;/g,'class');
 
-    codes = `<pre class="escape-container"><code>${codes}</code></pre>`;
-    console.log(codes);
-
+    codes = `<pre class="escape-container">
+                <code>
+                    ${codes}
+                </code>
+             </pre>`;
   return codes;
 };
 

@@ -109,31 +109,4 @@
         }
     }
 
-    /*.layout-nav{*/
-        /*width: 100%;*/
-        /*margin: 0 auto;*/
-    /*}*/
-    /*.layout-assistant{*/
-        /*width: 300px;*/
-        /*margin: 0 auto;*/
-        /*height: inherit;*/
-    /*}*/
-    /*.layout-breadcrumb{*/
-        /*padding: 10px 15px 0;*/
-    /*}*/
-    /*.layout-content{*/
-        /*min-height: 200px;*/
-        /*margin: 15px;*/
-        /*overflow: hidden;*/
-        /*background: #fff;*/
-        /*border-radius: 4px;*/
-    /*}*/
-    /*.layout-content-main{*/
-        /*padding: 10px;*/
-    /*}*/
-    /*.layout-copy{*/
-        /*text-align: center;*/
-        /*padding: 10px 0 20px;*/
-        /*color: #9ea7b4;*/
-    /*}*/
 </style>
