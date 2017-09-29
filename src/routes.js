@@ -12,10 +12,6 @@ export default new Router({
             path:'/',
             component:homePage
         },
-        // {
-        //     path:'/html',
-        //     component:sessionHtml
-        // },
         {
             path:'/about',
             component:aboutPage

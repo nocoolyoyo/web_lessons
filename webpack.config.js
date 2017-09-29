@@ -30,15 +30,25 @@ module.exports = {
                 loader: "babel-loader",
                 exclude: /node_modules/
             },
-            //解析.vue文件
+            //vue相关loaders
             {
                 test:/\.vue$/,
-                loader: "vue-loader",
-                exclude: /node_modules/
+                use: [
+                    {
+                        loader: 'vue-loader'
+                    },
+                    {
+                        loader: 'iview-loader',
+                        options: {
+                            prefix: true
+                        }
+                    }
+                ]
+            //    exclude: /node_modules/
             },
             //图片文件模块化
             {
-                test: /\.(png|jpg|gif|svg)$/,
+                test: /\.(png|jpg|gif|svg|ico)$/,
                 loader: 'file-loader',
                 options: {
                     name: '[name].[ext]?[hash]'
@@ -49,12 +59,36 @@ module.exports = {
                 test: /\.css$/,
                 loader: "style-loader!css-loader"
             },
+            // //其他文件模块化
+            {
+                test: /\.(eot|ttf|woff)$/,
+                loader: 'file-loader',
+            },
 
             //sass模块
             {
                 test: /\.scss$/,
                 loader: 'style-loader!css-loader!sass-loader'
-            }
+            },
+            // //iviewUI框架loaders
+            // {
+            //     test: /\.vue$/,
+            //     use: [
+            //         {
+            //             loader: 'vue-loader',
+            //             options: {
+            //
+            //             }
+            //         },
+            //         {
+            //             loader: 'iview-loader',
+            //             options: {
+            //                 prefix: false
+            //             }
+            //         }
+            //     ]
+            // }
+
 
         ]
     }

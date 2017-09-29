@@ -10,12 +10,8 @@
             </p>
         </div>
     </nav>
-
 </template>
-<style lang="scss">
 
-
-</style>
 <script>
 
 </script>

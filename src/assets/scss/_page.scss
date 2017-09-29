@@ -8,3 +8,27 @@ html, body {
   background: transparent;
 }
 
+
+
+
+//escapeCode代码展示的样式
+.escape-container {
+  padding: map_get($Spaces, 1);
+  background-color: map_get($Colors,silkgray);
+}
+.escape-id {
+  color: map_get($Colors, blood)
+}
+.escape-class {
+  color: map_get($Colors, aoyi)
+}
+.escape-docType {
+  font-weight: bold;
+  color: map_get($Colors, nightlight)
+}
+.escape-tag {
+  font-weight: bold;
+  color: map_get($Colors, lemon)
+}
+
+

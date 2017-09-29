@@ -23,20 +23,28 @@ $FontSize:(
 
 //色板-----------------------
 $Colors: (
+        milka: #f5f7f9,
+        silkgray: rgb(250, 253, 255),
+        huiyuan: #d7dde4,
+        nightlight: #5b6270,
+        aoyi: #51a3ff,
+        blood: rgb(222, 67, 46),
         lemon: rgb(222, 172, 18),
         darklemon: rgb(170, 130, 50),
         drakTree: rgb(60, 142, 40),
         grayEyes: rgb(137, 122, 98)
 );
 
-//间距,尺寸
-//-----------------------
+//间距,尺寸-----------------------
 $Spaces: (
            //间距
           1: 0.5rem,
-          2: 0.8rem,
+          2: 0.10rem,
         );
 
-
+//边线-----------------------
+$Borders: (
+        box: 1px solid map_get($Colors,huiyuan),
+);
 
 
