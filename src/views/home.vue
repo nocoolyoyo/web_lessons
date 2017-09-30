@@ -1,35 +1,15 @@
 <script>
     import Escape from '../modules/escapeHtml';
+    import LessonMock from '../assets/mock/lessons-html';
 
 
-    let htmls = Escape(`
-        <!DOCTYPE html>
-        <html>
-            <head>
-                <meta charset="utf-8">
-                <title>菜鸟教程(runoob.com)</title>
-            </head>
-            <body>
-                <h1 id="articleId">我的第一个标题</h1>
-
-                <p class="article-text">我的第一个段落。</p>
-            </body>
-        </html>
-    `);
 
 
     export default {
         data () {
             return {
                 pointPage: 0,
-                htmls: htmls,
-                setting: {
-                    autoplay: false,
-                    autoplaySpeed: 2000,
-                    dots: 'inside',
-                    trigger: 'click',
-                    arrow: 'hover'
-                }
+                htmls: Escape(LessonMock.demoCode)
             }
         },
     }
@@ -43,13 +23,16 @@
                         Html
                     </MenuItem>
                     <MenuItem name="2">
-                        评论管理
+                        CSS
                     </MenuItem>
                     <MenuItem name="3">
-                        用户留存
+                        JS
                     </MenuItem>
                     <MenuItem name="4">
-                        流失用户
+                        浏览器
+                    </MenuItem>
+                    <MenuItem name="4">
+                        前端框架
                     </MenuItem>
                 </Menu>
             </i-col>
@@ -58,11 +41,26 @@
                     <CarouselItem>
                         <div class="point-item">
                             <Card shadow>
-                                <p slot="title">Html</p>
-                                <p v-html="htmls">
+                                <h1 slot="title">课程1</h1>
+                                <article>
+                                    <section>
+                                        <h2>什么是html?</h2>
 
-                                </p>
-                                <p>卡片内容</p>
+                                        <div>
+                                            <ul>
+                                                <li>1.html学术简称超文本标记语言,是因为基于浏览器解析用的说明语言</li>
+                                            </ul>
+                                        </div>
+
+
+                                    </section>
+                                    <section>
+                                        <p>html的基本结构</p>
+                                        <p v-html="htmls"></p>
+                                    </section>
+
+                                    <section>http://www.css88.com/book/css/</section>
+                                </article>
                             </Card>
                         </div>
                     </CarouselItem>
@@ -90,20 +88,26 @@
         overflow: hidden;
         border: map_get($Borders,box);
         background: map_get($Colors,milka);
-        .layout-left,.layout-main,.layout-menu {
+
+        .layout-left,
+        .layout-main,
+        .layout-menu {
             height: inherit;
         }
+
         .layout-menu {
             width: auto !important;
         }
+
         .layout-main {
 
             .power-point {
                 width: 100%;
                 height: inherit;
             }
+
             .point-item {
-                padding: map_get($Spaces,1);
+                padding: map_get($Spaces,small);
                 height: inherit
             }
         }

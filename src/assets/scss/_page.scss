@@ -10,25 +10,49 @@ html, body {
 
 
 
+h1 {
+  font-size: map_get($FontSize, h1);
+}
+h2 {
+  font-size: map_get($FontSize, h2);
+}
+article {
+  section {
+    h2 {
+      font-size: map_get($FontSize, h2);
+    }
+    p {
+      font-size: map_get($FontSize, p2);
+      margin: map_get($Spaces, small);
+    }
+  }
 
+}
 //escapeCode代码展示的样式
 .escape-container {
-  padding: map_get($Spaces, 1);
+  padding: map_get($Spaces, small);
   background-color: map_get($Colors,silkgray);
-}
-.escape-id {
-  color: map_get($Colors, blood)
-}
-.escape-class {
-  color: map_get($Colors, aoyi)
-}
-.escape-docType {
-  font-weight: bold;
-  color: map_get($Colors, nightlight)
-}
-.escape-tag {
-  font-weight: bold;
-  color: map_get($Colors, lemon)
+  .escape-id {
+    color: map_get($Colors, drakTree)
+  }
+  .escape-id-val {
+    color: map_get($Colors, blood)
+  }
+  .escape-class {
+    color: map_get($Colors, aoyi)
+  }
+  .escape-class-val {
+    color: map_get($Colors, blood)
+  }
+  .escape-docType {
+    font-weight: bold;
+    color: map_get($Colors, nightlight)
+  }
+  .escape-tag {
+    font-weight: bold;
+    color: map_get($Colors, darklemon)
+  }
+
 }
 
 
