@@ -3,7 +3,7 @@
 //-----------------------
 
 html, body {
-  height: 100%;
+  //height: 100%;
   width: 100%;
   background: transparent;
 }
@@ -11,46 +11,59 @@ html, body {
 
 
 h1 {
-  font-size: map_get($FontSize, h1);
+  font-size: $fs-h1
 }
 h2 {
-  font-size: map_get($FontSize, h2);
+  font-size: $fs-h2
 }
 article {
   section {
     h2 {
-      font-size: map_get($FontSize, h2);
+      cursor: pointer;
+      font-size: $fs-h2;
+      line-height: 1.3;
+      margin: $s-small 0;
+      .section-cursor {
+        opacity: 0;
+        transition:  0.3s opacity linear;
+        color: $c-aoyi
+      }
+      &:hover > .section-cursor {
+          opacity: 1;
+      }
     }
     p {
-      font-size: map_get($FontSize, p2);
-      margin: map_get($Spaces, small);
+      line-height: 1.2;
+      font-size:  $fs-p2;
+      margin: $s-small;
     }
   }
 
 }
 //escapeCode代码展示的样式
 .escape-container {
-  padding: map_get($Spaces, small);
-  background-color: map_get($Colors,silkgray);
+  padding: $s-small;
+  overflow-x:auto;
+  background-color: $c-silkgray;
   .escape-id {
-    color: map_get($Colors, drakTree)
+    color:  $c-darkTree
   }
   .escape-id-val {
-    color: map_get($Colors, blood)
+    color: $c-blood
   }
   .escape-class {
-    color: map_get($Colors, aoyi)
+    color: $c-aoyi
   }
   .escape-class-val {
-    color: map_get($Colors, blood)
+    color: $c-blood
   }
   .escape-docType {
     font-weight: bold;
-    color: map_get($Colors, nightlight)
+    color: $c-nightlight
   }
   .escape-tag {
     font-weight: bold;
-    color: map_get($Colors, darklemon)
+    color: $c-darklemon
   }
 
 }

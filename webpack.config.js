@@ -1,9 +1,13 @@
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const autoprefixer = require('autoprefixer');
+
 module.exports = {
     devtool: '#eval-source-map',
     entry: __dirname + "/src/main.js",
     output: {
         path: __dirname + "/dist",
-        filename: "build.js"
+        filename: '[name].[chunkHash:5].js',
+        // filename: "build.js"
     },
     resolve: {
         extensions: ['.js', '.jsx'],
@@ -24,7 +28,7 @@ module.exports = {
 
     module: {
         rules: [
-            //转化ES6语法
+            //ES6转义向前兼容
             {
                 test: /\.(jsx|js)$/,
                 loader: "babel-loader",
@@ -34,9 +38,11 @@ module.exports = {
             {
                 test:/\.vue$/,
                 use: [
+                    //vue转义为ES6
                     {
                         loader: 'vue-loader'
                     },
+                    //iview转义为vue
                     {
                         loader: 'iview-loader',
                         options: {
@@ -46,6 +52,37 @@ module.exports = {
                 ]
             //    exclude: /node_modules/
             },
+            //其他文件模块化
+            {
+                test: /\.(eot|ttf|woff)$/,
+                loader: 'file-loader',
+            },
+            //sass模块
+            {
+                test: /\.scss$/,
+                loader: 'style-loader!css-loader!postcss-loader!sass-loader',
+                exclude: /node_modules/
+            },
+            //css模块
+            {
+                test: /\.css$/,
+                use: [
+                    {
+                        loader: "style-loader",
+                    },
+                    {
+                        loader: "css-loader",
+                    },
+                    {
+                        loader: 'postcss-loader',
+                        options: {
+                            plugins: (loader) => [
+                                autoprefixer()
+                            ]
+                        }
+                    }
+                ]
+            },
             //图片文件模块化
             {
                 test: /\.(png|jpg|gif|svg|ico)$/,
@@ -54,43 +91,13 @@ module.exports = {
                     name: '[name].[ext]?[hash]'
                 }
             },
-            //css模块
-            {
-                test: /\.css$/,
-                loader: "style-loader!css-loader"
-            },
-            // //其他文件模块化
-            {
-                test: /\.(eot|ttf|woff)$/,
-                loader: 'file-loader',
-            },
-
-            //sass模块
-            {
-                test: /\.scss$/,
-                loader: 'style-loader!css-loader!sass-loader'
-            },
-            // //iviewUI框架loaders
-            // {
-            //     test: /\.vue$/,
-            //     use: [
-            //         {
-            //             loader: 'vue-loader',
-            //             options: {
-            //
-            //             }
-            //         },
-            //         {
-            //             loader: 'iview-loader',
-            //             options: {
-            //                 prefix: false
-            //             }
-            //         }
-            //     ]
-            // }
-
-
         ]
-    }
+    },
 
+    plugins:[
+            new HtmlWebpackPlugin({
+                title: 'demo',
+                template: 'index.html' // 模板路径
+            })
+    ]
 };

@@ -7,46 +7,66 @@
 //-----------------------
 $baseFontFamily: "黑体";
 
-//字体-大小
-//-----------------------
+//字体-大小-----------------------
+$fs-h1: 24px;   //大标题，多用于正文标题
+$fs-h2: 20px;   //大标题，多用于正文标题
+$fs-p1: 14px;    //主内容，多用正文，大多数文字
+$fs-p2: 16px;    //主内容，多用正文，大多数文字
 $FontSize:(
-        h1:24px,              //大标题，多用于正文标题
-        h2:20px,              //大标题，多用于正文标题
-        p1:14px,              //主内容，多用正文，大多数文字
-        p2:16px,              //主内容，多用正文，大多数文字
+        h1:  $fs-h1,
+        h2:  $fs-h2,
+        p1:  $fs-p1,
+        p2:  $fs-p2
 );
 
-//行高
-//-----------------------
-//$LineHeight:(
-//        1: 30px,              //大标题，多用于正文标题
-//        2: 20px,              //主内容，多用正文，大多数文字
-//);
+//字体-行高-----------------------
+$lh-h1: 24px;
+$lh-h2: 20px;
+$lh-p1: 14px;
+$lh-p2: 16px;
+$LineHeight:(
+        h1:  $lh-h1,
+        h2:  $lh-h2,
+        p1:  $lh-p1,
+        p2:  $lh-p2
+);
 
 //色板-----------------------
+$c-milka:  #f5f7f9;
+$c-silkgray:  rgb(250, 253, 255);
+$c-huiyuan:  #d7dde4;
+$c-nightlight:  #5b6270;
+$c-aoyi:  #51a3ff;
+$c-blood:  rgb(222, 67, 46);
+$c-lemon:   rgb(222, 172, 18);
+$c-darklemon:  rgb(170, 130, 50);
+$c-darkTree:  rgb(60, 142, 40);
+$c-grayEyes:  rgb(137, 122, 98);
 $Colors: (
-        milka: #f5f7f9,
-        silkgray: rgb(250, 253, 255),
-        huiyuan: #d7dde4,
-        nightlight: #5b6270,
-        aoyi: #51a3ff,
-        blood: rgb(222, 67, 46),
-        lemon: rgb(222, 172, 18),
-        darklemon: rgb(170, 130, 50),
-        drakTree: rgb(60, 142, 40),
-        grayEyes: rgb(137, 122, 98)
+        milka:  $c-milka,
+        silkgray: $c-silkgray,
+        huiyuan: $c-huiyuan,
+        nightlight: $c-nightlight,
+        aoyi: $c-aoyi,
+        blood: $c-blood,
+        lemon: $c-lemon,
+        darklemon: $c-darklemon,
+        drakTree: $c-darkTree,
+        grayEyes: $c-grayEyes
 );
-
 //间距,尺寸-----------------------
+$s-small: 0.5rem;
+$s-middle:1 rem;
 $Spaces: (
            //间距
-          small: 0.5rem,
-          middle: 1rem,
+          small: $s-small,
+          middle: $s-middle,
         );
 
 //边线-----------------------
+$b-box:1px solid $c-huiyuan;
 $Borders: (
-        box: 1px solid map_get($Colors,huiyuan),
+        box: $b-box
 );
 
 

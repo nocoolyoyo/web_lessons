@@ -3,14 +3,16 @@ import Vue from 'vue'
 
 import App from './app.vue'
 import router from './routes.js'
+
 import iView from 'iview'
+
 import 'iview/dist/styles/iview.css'    // 使用 CSS
+
 import './assets/scss/style.scss'
 
 Vue.config.debug = true;//开启错误提示
 
 Vue.use(iView);
-
 
 //渲染根节点
 new Vue({
