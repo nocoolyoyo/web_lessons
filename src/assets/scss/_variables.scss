@@ -42,6 +42,8 @@ $c-lemon:   rgb(222, 172, 18);
 $c-darklemon:  rgb(170, 130, 50);
 $c-darkTree:  rgb(60, 142, 40);
 $c-grayEyes:  rgb(137, 122, 98);
+$c-themeGray:  #e9eaec;
+
 $Colors: (
         milka:  $c-milka,
         silkgray: $c-silkgray,
@@ -56,15 +58,18 @@ $Colors: (
 );
 //间距,尺寸-----------------------
 $s-small: 0.5rem;
-$s-middle:1 rem;
+$s-middle: 1rem;
+$s-big: 2rem;
 $Spaces: (
            //间距
           small: $s-small,
           middle: $s-middle,
+          big: $s-big
         );
 
 //边线-----------------------
 $b-box:1px solid $c-huiyuan;
+$b-divider: 1px solid $c-themeGray;
 $Borders: (
         box: $b-box
 );
