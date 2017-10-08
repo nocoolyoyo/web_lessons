@@ -8,8 +8,6 @@ html, body {
   background: transparent;
 }
 
-
-
 h1 {
   font-size: $fs-h1
 }
@@ -17,41 +15,49 @@ h2 {
   font-size: $fs-h2
 }
 article {
+  padding: 5px;
   section {
-  margin:  $s-big 0;
-    //列表引用头
+  margin:  $s-middle 0;
+    ul,ol{
+      padding-left: 1em;
+    }
     %li-label-base {
       font-style: normal;
       font-weight: normal;
       font-variant: normal;
       text-transform: none;
       line-height: 1;
-      /* Better Font Rendering =========== */
       -webkit-font-smoothing: antialiased;
       -moz-osx-font-smoothing: grayscale;
     }
-    .li-label-normal {
-      &:before {
+    //label类型ul列表
+    .label-ul {
+      &>li>*:first-child:before{
         @extend %li-label-base;
         color: $c-aoyi;
         content: '●     ';
       }
     }
-    .li-label-warning {
-      &:before {
+    //label类型ol列表
+    .label-ol {
+      //ol最大条目数样式限制
+      $list-max-number: 10;
+      & > li > *:first-child:before {
         @extend %li-label-base;
-        color: $c-darklemon;
-        content: '●     ';
       }
-    }
-    .li-label-danger {
-      &:before {
-        @extend %li-label-base;
-        color: $c-blood;
-        content: '●     ';
-      }
-    }
 
+      @for $i from 1 through $list-max-number {
+        & > li:nth-child(#{$i}) > *:first-child:before {
+          color: $c-aoyi;
+          //border-radius: 50%;
+          display: inline-block;
+          //width: 1em;
+          text-align: center;
+          //background-color: $c-aoyi;
+          content: '#{$i}、';
+        }
+      }
+    }
     //文章详述
     .p-detail {
       background-color: $c-silkgray;
@@ -78,7 +84,7 @@ article {
     p {
       line-height: 1.2;
       font-size:  $fs-p2;
-      margin: $s-small;
+      margin: $s-small 0;
     }
   }
 

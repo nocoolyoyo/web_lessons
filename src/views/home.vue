@@ -46,14 +46,12 @@
 
         .layout-main {
             margin-left: calc(#{$widthMenu} + 5*#{$s-small});
-            .power-point {
-                width: 100%;
-                height: inherit;
-            }
-
             .point-item {
                 padding: $s-small;
-                height: inherit
+                width: 100%;
+                height: auto;
+                min-height: 99.5vh;
+                box-sizing: border-box;
             }
         }
     }
