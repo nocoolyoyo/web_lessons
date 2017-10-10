@@ -15,16 +15,13 @@
 <template>
     <div class="point-item">
         <Card shadow>
-            <h1 slot="title">HtmlDOM</h1>
+            <h1 slot="title">Javascript</h1>
             <article>
                 <section>
-                    <h2>Html <a class="section-cursor">#</a></h2>
+                    <h2>Javascript <a class="section-cursor">#</a></h2>
                     <ul class="label-ul">
                         <li>
                             <p>所有的网页都是以Html这样的文本标记语言为基础，嵌入的其他语言<span class="p-detail"> （script标签，style标签）</span></p>
-                        </li>
-                        <li>
-                            <p>html通过标签表示文档每个节点，节点又可以包含其他节点，所以节点和html一样呈现树状结构</p>
                         </li>
                     </ul >
                 </section>

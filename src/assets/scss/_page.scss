@@ -88,6 +88,11 @@ article {
     }
   }
 
+  img {
+    width: auto;
+    height: auto;
+    max-width: 100%;
+  }
 }
 //escapeCode代码展示的样式
 .escape-container {
