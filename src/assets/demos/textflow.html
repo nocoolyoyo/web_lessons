@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>文字相关</title>
+    <style>
+        #box {
+            width: 100px;
+            background-color: burlywood ;
+            text-overflow: ellipsis;
+            height:auto;
+            /*font-size: 12px;*/
+            word-break: break-all;
+            /*text-overflow:clip;*/
+            display: -webkit-box;
+            overflow: hidden;
+            word-wrap: break-word;
+            white-space: normal !important;
+            -webkit-line-clamp:3;
+            -webkit-box-orient: vertical;
+
+        }
+    </style>
+</head>
+<body>
+    <div id="box">
+     买卖皮买皮屁 买卖皮买皮屁  买卖皮买皮屁买卖皮买皮屁买卖皮买皮屁
+    </div>
+</body>
+<script>
+    var value   =  new String('12');
+    var val = 112333;
+    console.info(typeof(val));
+    val = String(val);
+    console.info(typeof(val));
+
+</script>
+</html>
