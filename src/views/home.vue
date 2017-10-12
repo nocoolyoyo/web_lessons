@@ -31,7 +31,7 @@
             let vRoot = this;
 
             window.onkeydown = function (e) {
-                if(e.keyCode === 107)
+                if(e.keyCode === 13)
                     vRoot.toggleMenu();
 
 

@@ -91,12 +91,6 @@
                         <li>
                             <p>浏览器兼容</p>
                         </li>
-                        <li>
-                            <p>border</p>
-                        </li>
-                        <li>
-                            <p>box-sizing</p>
-                        </li>
                     </ul >
                 </section>
             </article>
