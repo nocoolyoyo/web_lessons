@@ -1,9 +1,7 @@
 <script>
     import MenuList from '../components/menu.vue';
     import Router  from 'vue-router';
-    document.addEventListener('scroll',function () {
-        console.log(1)
-    });
+
     export default {
         components:{
             MenuList

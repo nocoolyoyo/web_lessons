@@ -38,7 +38,7 @@
                         <li>
                             <p>padding</p>
                         </li>
-                        <li>
+                        <li>n
                             <p>border</p>
                         </li>
                         <li>
@@ -67,7 +67,7 @@
                                 <li>
                                     <p>sticky</p>
                                 </li>
-                            </ol >
+                            </ol>
                         </li>
                         <li>
                             <p>z-index</p>
