@@ -1,12 +1,9 @@
 <script>
-    import Escape from '../../modules/EscapeCode'
-    import LessonMock from '../../assets/mock/lessons-HtmlDOM'
 
     export default {
         data () {
             return {
-                htmlCode: Escape(LessonMock.htmlCode),
-                attrCode: Escape(LessonMock.attrCode)
+
             }
         },
     }

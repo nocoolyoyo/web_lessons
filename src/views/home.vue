@@ -5,15 +5,46 @@
     export default {
         components:{
             MenuList
+        },
+        data (){
+            return {
+                showMenu: true
+            }
+        },
+        methods:{
+            toggleMenu: function (show) {
+                let _this = this;
+                let $menu = document.querySelector('.layout-menu');
+                let $board = document.querySelector('.layout-main');
+                if(_this.showMenu) {
+                    $menu.style.opacity = "0";
+                    $board.style.marginLeft = "0px";
+                }else{
+                    $menu.style.opacity = "1";
+                    $board.style.marginLeft = "200px";
+                }
+                _this.showMenu = !_this.showMenu;
+            }
+        },
+        mounted: function () {
+
+            let vRoot = this;
+
+            window.onkeydown = function (e) {
+                if(e.keyCode === 107)
+                    vRoot.toggleMenu();
+
+
+            };
         }
     }
 </script>
 <template>
-        <div class="layout" >
-            <div  class="layout-menu">
+        <div class="layout">
+            <div class="layout-menu">
                 <Menu-list></Menu-list>
             </div>
-            <div  class="layout-main">
+            <div class="layout-main">
                 <router-view></router-view>
             </div>
         </div>
@@ -37,13 +68,13 @@
             min-height: 100vh ;
             width:  $widthMenu !important;
             &>ul {
-                width: inherit;
-                min-height: inherit;
+                width: inherit !important;
+                min-height: inherit !important;
             }
         }
 
         .layout-main {
-            margin-left: calc(#{$widthMenu} + 5*#{$s-small});
+            margin-left: $widthMenu;
             .point-item {
                 padding: $s-small;
                 width: 100%;
