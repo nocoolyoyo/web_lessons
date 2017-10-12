@@ -38,6 +38,40 @@
                         <li>
                             <p>padding</p>
                         </li>
+                        <li>n
+                            <p>border</p>
+                        </li>
+                        <li>
+                            <p>box-sizing</p>
+                        </li>
+                    </ul >
+                    <p>
+                        <img src="../../assets/imgs/boxModel.jpg">
+                    </p>
+                </section>
+                <section>
+                    <h2>定位与层叠 <a class="section-cursor">#</a></h2>
+                    <ul class="label-ul">
+                        <li>
+                            <p>postion</p>
+                            <ol class="label-ol">
+                                <li>
+                                    <p>absolute</p>
+                                </li>
+                                <li>
+                                    <p>relative</p>
+                                </li>
+                                <li>
+                                    <p>fixed</p>
+                                </li>
+                                <li>
+                                    <p>sticky</p>
+                                </li>
+                            </ol>
+                        </li>
+                        <li>
+                            <p>z-index</p>
+                        </li>
                         <li>
                             <p>border</p>
                         </li>
@@ -45,15 +79,17 @@
                             <p>box-sizing</p>
                         </li>
                     </ul >
+                    <iframe  frameborder="no" border="0" height="700px" width="500px" src="https://weui.io/#layers"></iframe>
                 </section>
+
                 <section>
-                    <h2>浏览器兼容 <a class="section-cursor">#</a></h2>
+                    <h2>细节注意 <a class="section-cursor">#</a></h2>
                     <ul class="label-ul">
                         <li>
-                            <p>margin</p>
+                            <p>文字溢出和换行</p>
                         </li>
                         <li>
-                            <p>padding</p>
+                            <p>浏览器兼容</p>
                         </li>
                         <li>
                             <p>border</p>

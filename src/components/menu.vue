@@ -3,7 +3,7 @@
     export default {
         data () {
             return {
-                pageName:  'DOM',
+                pageName:  'HtmlDOM',
             }
         },
         methods: {

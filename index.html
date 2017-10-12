@@ -3,6 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <script language="javascript">
+        var scrollFunc=function(e){
+
+            e=e || window.event;
+            console.log(e.keyCode)
+            if((e.wheelDelta||e.keyCode === 107||e.keyCode === 109 )&& event.ctrlKey){//IE/Opera/Chrome
+                event.returnValue=false;
+            }else if(e.detail){//Firefox
+                event.returnValue=false;
+            }
+        };
+        /*注册事件*/
+        if(document.addEventListener){
+            document.addEventListener('DOMMouseScroll',scrollFunc,false);
+            document.addEventListener('keydown',scrollFunc,false);
+        }//W3C
+        window.onmousewheel=document.onmousewheel=scrollFunc;//IE/Opera/Chrome/Safari
+    </script>
 </head>
 <body>
     <app></app>
